@@ -1,0 +1,15 @@
+{
+	"name":"JBoss Audit Log GROK pattern for Graylog",
+	"description":"Graylog Grok pattern for JBoss Audit Log.\nTested on JBoss EAP 6.4",
+	"category":"Grok",
+	"inputs":[],
+	"streams":[],
+	"outputs":[],
+	"dashboards":[],
+	"grok_patterns":[
+		{
+			"name":"JBOSSAUDITLOG",
+			"pattern":"(?s)%{TIMESTAMP_ISO8601:jboss_auditlog_timestamp} %{GREEDYDATA} \"type\" : %{QUOTEDSTRING:jboss_auditlog_type}%{GREEDYDATA} \"r/o\" : %{WORD:jboss_auditlog_ro}%{GREEDYDATA} \"booting\" : %{WORD:jboss_auditlog_booting}%{GREEDYDATA} \"version\" : %{QUOTEDSTRING:jboss_auditlog_version}%{GREEDYDATA} \"user\" : %{QUOTEDSTRING:jboss_auditlog_user}%{GREEDYDATA} \"domainUUID\" : %{QUOTEDSTRING:jboss_auditlog_domainuuid}%{GREEDYDATA} \"access\" : %{QUOTEDSTRING:jboss_auditlog_access}%{GREEDYDATA} \"remote-address\" : %{QUOTEDSTRING:jboss_auditlog_remote-address}%{GREEDYDATA} \"success\" : %{WORD:jboss_auditlog_success}%{GREEDYDATA} \"ops\" : \\[%{GREEDYDATA:jboss_auditlog_ops}\\]"
+		}
+	]
+}
