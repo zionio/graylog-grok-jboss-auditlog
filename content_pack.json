@@ -1,5 +1,5 @@
 {
-	"name":"JBoss Audit Log GROK pattern for Graylog",
+	"name":"JBoss Audit Log GROK pattern for Graylog (@zionio 2016)",
 	"description":"Graylog Grok pattern for JBoss Audit Log. Tested on JBoss EAP 6.4",
 	"category":"Grok",
 	"inputs":[],
